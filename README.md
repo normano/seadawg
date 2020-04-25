@@ -1,8 +1,10 @@
 # SeaDawg
 
-SeaDawg is a library that implements the online algorithm for Compact Direct Acyclic Word Graph (CDAWG) with custom extensions (v2, no edges to sinks and no word terminator).
+SeaDawg is a library that implements the online algorithm for Direct Acyclic Word Graph (DAWG) and Compact Direct Acyclic Word Graph (CDAWG).
 
-The version implemented is as defined in the [On-Line Construction ofCompact Directed Acyclic Word Graphs](https://str.i.kyushu-u.ac.jp/~inenaga/papers/dam-cdawg.pdf) by Shunsuke Inenaga et. al.
+The DAWG version implemented as defined in [Complete Inverted Files for Efficient Text Retrieval and Analysis](https://www.cs.colostate.edu/pubserv/pubs/Blumer-rmm-invertedFiles.pdf) by A. Blumer et. al.
+
+The CDAWG version implemented is as defined in the [On-Line Construction of Compact Directed Acyclic Word Graphs](https://str.i.kyushu-u.ac.jp/~inenaga/papers/dam-cdawg.pdf) by Shunsuke Inenaga et. al.
 
 Licensed under the MPL 2.0 since it is fair enough.
 
