@@ -1,0 +1,54 @@
+{
+  "name": "@excsn/seadawg",
+  "version": "1.0.0",
+  "description": "Implementation of Online Compact Directed Acyclic Word Graph",
+  "author": "normano <novenseri@gmail.com>",
+  "license": "MPL-2.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "preversion": "npm-link-check",
+    "test": "tsc && APP_ENV=test yarn run ava --tap",
+    "test:cov": "yarn run nyc -r cobertura -r html -r text yarn run test",
+    "build": "tsc",
+    "tool:bad_states": "NODE_OPTIONS='--max-old-space-size=8192' node -r ts-node/register --expose-gc tools/bad_state_runner.ts",
+    "tool:thrash": "NODE_OPTIONS='--max-old-space-size=8192' node -r ts-node/register --expose-gc tools/thrasher.ts",
+    "example:basic": "ts-node examples/basic.ts",
+    "example:map": "ts-node examples/map.ts"
+  },
+  "dependencies": {
+    "cbor-js": "^0.1.0",
+    "cuckoo-filter": "^1.1.4",
+    "dumpenvy": "^1.3.0",
+    "klona": "^1.1.1",
+    "log4js": "^6.1.0"
+  },
+  "devDependencies": {
+    "@adriantombu/array-shuffle": "^2.0.3",
+    "@types/node": "^12.12.12",
+    "ava": "^3.5.0",
+    "fs-extra": "^9.0.0",
+    "nyc": "15.0.0",
+    "pretty-ms": "^6.0.1",
+    "randomstring": "^1.1.5",
+    "shufflr": "^2.0.8",
+    "sinon": "^7.5.0",
+    "ts-node": "^8.5.2",
+    "ts-sinon": "^1.0.24",
+    "typescript": "^3.7.2"
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "failFast": true,
+    "tap": true,
+    "powerAssert": false,
+    "files": [
+      "test/**/*",
+      "!test/src/**"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  }
+}
